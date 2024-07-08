@@ -1,0 +1,108 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font: Georgia;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container::before{
+    content: "";
+    width: 100%;
+    height: 100vh;
+    background-image: url("./bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    opacity: 0.4;
+}
+/* this is basically done to make background image effect that looks like it is before the body and thats why we have given black color in background */
+
+
+.weather{
+    color: white;
+    z-index: 2;
+    /* An element with a higher z-index value will appear in front of an element with a lower z-index value */
+    display: flex;
+    align-items: center;
+}
+.weather>div{
+    margin: 0.625rem;
+}
+.weather1{
+    font-size: 2rem;
+}
+
+.weather p{
+    font-size: 2rem;
+}
+.weather span{
+    font-size: 1rem;
+}
+.weather3 img{
+    width: 2rem;
+}
+.weather3 span{
+    margin: 0.5rem;
+}
+
+nav{
+    height: 100px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.18);
+    border-radius: 100px 100px 0 0;
+    padding: 1rem 0;
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    background-color: rgba(180,177,177,0.075);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav form{
+    width: 70%;
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    /* The grid-template-columns property specifies the number (and the widths) of columns in a grid layout. The values are a space separated list, where each value specifies the size of the respective column. */
+
+    /* fr fractional unit  */
+}
+
+.searchfield{
+    font-size: 1.1rem;
+    outline: none;
+    color: white;
+    background-color: transparent;
+   padding: 20px 0;
+   border: none;
+   border-bottom: 2px solid white;
+   width: 95%;
+}
+
+nav form button{
+    background-color: grey;
+    color: white;
+    font-size: 1.1rem;
+    border-radius: 35px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+nav form button:hover{
+    background-color: white;
+    color: black;
+}
+
+::placeholder{
+    color: white;
+    opacity: 1;
+}
